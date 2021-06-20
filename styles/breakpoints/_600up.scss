@@ -5,11 +5,14 @@
   display: none;
 }
 .header {
-  height: 80px;
+  line-height: 1;
+  padding: 30px;
+  &.transform {
+    padding: 10px 30px;
+  }
   &__title {
     font-size: 28px;
   }
-
   &__nav {
     display: block;
   }

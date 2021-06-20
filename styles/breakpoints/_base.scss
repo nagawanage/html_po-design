@@ -102,24 +102,31 @@ button {
 }
 
 .header {
-  background-color: #21054d;
   color: $cWhite;
 
   // @include font-size_vw(18);
   font-family: Montserrat;
   font-size: 18px;
   font-weight: bold;
-  height: 60px;
+  // line-height: 1;
+  padding: 10px 15px;
   position: fixed;
   width: 100%;
   z-index: 10;
+  transition-duration: 0.5s;
 
+  &.transform {
+    background-color: #21054d;
+    // background: rgba(255, 255, 255, 0.9);
+    // padding: 10px 20px;
+    transition-duration: 0.5s;
+    // box-shadow: 10px 0 25px -10px;
+  }
   &__inner {
-    padding: 10px 15px;
     display: grid;
     grid-template: 1fr / 1fr 40px;
     align-items: center;
-    height: 100%;
+    // height: 100%;
   }
   &__title {
     font-size: 18px;
