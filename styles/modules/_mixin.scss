@@ -1,0 +1,52 @@
+@mixin btn($border-radius: 30px, $color: #fff, $width: 220px) {
+  border-radius: 10px;
+  color: $color;
+  display: block;
+  margin: 0 auto;
+  width: $width;
+}
+
+// スマホ用フォントサイズレスポンシブ
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function get_vw($size, $viewport: 320) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin font-size_vw($font_size: 1) {
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
+
+// @mixin link-btn($border: 1px $cWhite solid, $width: 220px) {
+@mixin link-btn($color: $cWhite, $border: none) {
+  border: $border;
+  border-radius: 45px;
+  color: $color;
+  font-family: Montserrat;
+  font-weight: bold;
+  // text-align: center;
+}
+
+// .btn-more {
+//   background: linear-gradient(to right, #7633a4, #250d65); //!
+//   border-radius: 45px;
+//   color: $cWhite;
+//   display: inline-block;
+//   font-family: Montserrat;
+//   font-weight: bold;
+//   margin-top: 30px;
+//   padding: 20px 80px;
+//   @extend %font-sm;
+//   @include link-btn()
+// }
+
+@keyframes arrow-animation {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,127 @@
+/******************************************************************
+PC
+******************************************************************/
+%font-lg {
+  font-size: 72px;
+}
+
+.sp-br {
+  display: none;
+}
+
+.sec-title {
+  font-size: 36px;
+  font-family: Montserrat;
+}
+.sec-sub-title {
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.hero {
+  &__sub-title {
+    font-size: 24px;
+  }
+}
+.news {
+  &__inner {
+    display: flex;
+  }
+  &__title {
+    padding-right: 50px;
+  }
+  & .news-list__item {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  &__head {
+    margin-right: 20px;
+  }
+}
+
+.service {
+  & .service-list__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+.works {
+  padding: 50px 50px 22px 50px;
+  width: 90%;
+  margin: 0 auto;
+  &::before {
+    content: "";
+    display: block;
+    width: 65%;
+    position: absolute;
+    height: 100%;
+    z-index: -10;
+  }
+  &__inner {
+    align-items: center;
+    width: 100%;
+    display: grid;
+    grid-template:
+    // "... ...... ...... ...... ....." 50px
+
+      "swiper ...... ......" 60px
+      "swiper ...... title " 56px
+      "swiper ...... subttl" 20px
+      "swiper ...... text  " 100px
+      "swiper ...... btn   " 100px
+      // "... ...... ...... ...... ....." 50px
+      // / 52vw 20px 1fr;
+      / 60% 20px 1fr;
+    & .sec-title {
+      grid-row: 2;
+      grid-area: title;
+    }
+    .sec-sub-title {
+      grid-row: 3;
+      grid-area: subttl;
+      margin: 0;
+    }
+    .works__images {
+      grid-area: swiper;
+      grid-column: 1;
+      grid-row: 1 / 7;
+    }
+    .text {
+      grid-row: 4;
+      grid-area: text;
+    }
+    .block-center {
+      grid-row: -1;
+      grid-area: btn;
+    }
+    .btn-more {
+      margin: 0;
+    }
+  }
+  &__images {
+    // width: 60%;
+    max-width: 750px;
+    margin: 0;
+  }
+}
+
+.company {
+  padding-top: 110px;
+  background: url(../images/bg-circle.png) no-repeat,
+    url(./../images/bg-face.png) no-repeat;
+  background-position: center center, center center;
+}
+
+.recruit {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  width: 80%;
+  margin: 0 auto;
+  &__img {
+    grid-column: 2;
+    grid-row: 1;
+    object-fit: cover;
+  }
+}
