@@ -47,7 +47,6 @@ body.noscroll {
       font-size: 24px;
       font-weight: bold;
       &:hover {
-        // color: rgb(216, 202, 124);
         color: rgb(104, 151, 173);
       }
     }
@@ -58,17 +57,13 @@ body.noscroll {
 .burger-menu {
   display: block;
   position: relative;
-  height: 34px;
-  width: 40px;
-  z-index: 100;
-  text-align: center;
+  z-index: 10;
   & .bar {
     background-color: $cWhite;
     display: block;
     height: 2px;
     margin: 0 auto;
     width: 30px;
-    // position: absolute;
   }
   & .bar__top {
     margin-bottom: 7px;

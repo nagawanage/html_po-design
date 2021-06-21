@@ -491,10 +491,7 @@ button {
   .burger-menu {
     display: block;
     position: relative;
-    height: 34px;
-    width: 40px;
-    z-index: 100;
-    text-align: center;
+    z-index: 10;
   }
   .burger-menu .bar {
     background-color: white;
