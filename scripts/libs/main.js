@@ -38,3 +38,14 @@ $window.on("scroll", function () {
     $header.removeClass("transform");
   }
 });
+
+/************************
+ * mobile menu
+ ************************/
+let $burgerMenu = $(".burger-menu");
+let $globalNav = $(".nav-wrapper");
+$burgerMenu.on("click", function () {
+  $burgerMenu.toggleClass("is-click");
+  $globalNav.toggleClass("is-show");
+  $("body").toggleClass("noscroll");
+});

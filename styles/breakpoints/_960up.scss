@@ -18,11 +18,28 @@ PC
   margin-bottom: 32px;
 }
 
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  & .nav__list {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: calc(10px + 1vw);
+    font-size: 16px;
+  }
+  & .burger-menu {
+    display: none;
+  }
+}
+
 .hero {
   &__sub-title {
     font-size: 24px;
   }
 }
+
 .news {
   &__inner {
     display: flex;
