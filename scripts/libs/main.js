@@ -20,32 +20,62 @@ const swiper = new Swiper(".swiper-container", {
   },
 });
 
-/************************
- * Scroll
- ************************/
-let $window = $(window),
-  $header = $(".header"),
-  $transPos;
-console.log($transPos);
+$(function () {
+  let $window = $(window);
 
-$window.on("scroll", function () {
-  // $transPos = $(".hero").height() / 2;
-  $transPos = $header.height();
-  if ($window.scrollTop() > $transPos) {
-    // if ($window.scrollTop() > 100) {
-    $header.addClass("transform");
-  } else {
-    $header.removeClass("transform");
-  }
-});
+  /************************
+   * Scroll
+   ************************/
+  let $header = $(".header");
+  let $transPos;
+  console.log($transPos);
 
-/************************
- * mobile menu
- ************************/
-let $burgerMenu = $(".burger-menu");
-let $globalNav = $(".nav-wrapper");
-$burgerMenu.on("click", function () {
-  $burgerMenu.toggleClass("is-click");
-  $globalNav.toggleClass("is-show");
-  $("body").toggleClass("noscroll");
+  $window.on("scroll", function () {
+    // $transPos = $(".hero").height() / 2;
+    $transPos = $header.height();
+    if ($window.scrollTop() > $transPos) {
+      // if ($window.scrollTop() > 100) {
+      $header.addClass("transform");
+    } else {
+      $header.removeClass("transform");
+    }
+  });
+
+  /************************
+   * Mobile Menu
+   ************************/
+  let $burgerMenu = $(".burger-menu");
+  let $globalNav = $(".nav-wrapper");
+  $burgerMenu.on("click", function () {
+    $burgerMenu.toggleClass("is-click");
+    $globalNav.toggleClass("is-show");
+    $("body").toggleClass("noscroll");
+  });
+
+  /************************
+   * Page Top
+   ************************/
+
+  // let appear = false;
+  let pageTop = $("#page-top");
+  //一定幅スクロールしたら
+  $window.scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      // if (appear == false) {
+      //   appear = true;
+      pageTop.stop().animate({ bottom: "50px" }, 400);
+      // }
+    } else {
+      // 隠れる
+      // if (appear) {
+      //   appear = false;
+      pageTop.stop().animate({ bottom: "-50px" }, 400);
+      // }
+    }
+  });
+  //トップへ戻る
+  pageTop.click(function () {
+    $("body, html").animate({ scrollTop: 0 }, 500);
+    return false;
+  });
 });

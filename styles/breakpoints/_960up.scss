@@ -32,6 +32,24 @@ PC
   & .burger-menu {
     display: none;
   }
+  & .nav__item {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background: $cWhite;
+      bottom: -7px;
+      left: 0;
+      transform: scale(0, 1);
+      transition: transform 0.3s;
+      transform-origin: left top;
+    }
+    &:hover::after {
+      transform: scale(1, 1);
+    }
+  }
 }
 
 .hero {
@@ -140,5 +158,17 @@ PC
     grid-column: 2;
     grid-row: 1;
     object-fit: cover;
+  }
+}
+
+.footer {
+  &__inner {
+    width: 90%;
+    max-width: 760px;
+  }
+  & .nav__item {
+    & > a {
+      font-size: 18px;
+    }
   }
 }

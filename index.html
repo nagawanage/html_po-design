@@ -8,6 +8,9 @@
 
   <!-- Google Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/009a394729.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
   <!-- reset css -->
   <!-- <link rel="stylesheet" href="styles/vendors/sanitize.css"/> -->
@@ -17,15 +20,25 @@
   <!-- <link rel="stylesheet" href="styles/vendors/bootstrap.css"/> -->
   <link rel="stylesheet" href="styles/vendors/swiper.min.css" />
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="icon" href="./imges/favicon.ico">
+  <link rel="shortcut icon" href="images/favicon.ico" />
 
   <title>NAGAWA DESIGN</title>
-  <meta name="description" content="This site is a test site.">
-  <link rel="icon" href="./imges/favicon.ico">
+  <!-- ページのタイプ: TOPページはwebsite、それ以外のページはarticleに設定 -->
+  <meta property='og:type' content='website'>
+  <!-- SNSでシェアされたときのページタイトル -->
+  <meta property='og:title' content='PON DESIGN'>
+  <!-- SNSでシェアされたときのページのURL -->
+  <meta property='og:url' content='https://pon-design.netlify.app/'>
+  <!-- SNSでシェアされたときのページの紹介文 -->
+  <meta property='og:description'
+    content='PON DESIGNは、新規サイト制作や運用、アプリ開発に強いWeb制作会社です。サイト作りはお客様の夢を叶えること。だからこそ成果を出すサイトを全力でお作りします。'>
+  <!-- SNSでシェアされたときのサムネイル画像 -->
+  <meta property="og:image" content="https://pon-design.netlify.app/img/ogp.png">
+  <!-- ページの紹介文。Googleの検索結果に表示されます -->
+  <meta name="description"
+    content="PON DESIGNは、新規サイト制作や運用、アプリ開発に強いWeb制作会社です。サイト作りはお客様の夢を叶えること。だからこそ成果を出すサイトを全力でお作りします。" />
 
-  <!-- fontawesome -->
-  <script src="https://kit.fontawesome.com/009a394729.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <link rel="shortcut icon" href="images/favicon.ico" />
 </head>
 
 <body>
@@ -157,7 +170,7 @@
             <p class="text">様々なジャンルのWebサイト制作が可能です。<br>
               ご購入やお申込み数の増加などを実現します！
             </p>
-            <div class="block-center"> <a href="#" class="btn-more">MORE</a></div>
+            <div class="block-center"> <a href="works.html" class="btn-more">MORE</a></div>
           </div>
         </section>
         <!-- //works -->
@@ -234,10 +247,12 @@
         <div class="footer__policy">
           <!-- <a class="" href="#">プライバシーポリシー</a> -->
         </div>
-        <p class="footer__copyright">Copyright © 2021 xxx Japan. All Rights Reserved.</p>
+        <p class="footer__copyright">Copyright © 2021 xxx Japan.<br class="sp-br">All Rights Reserved.</p>
       </div>
     </footer>
     <!-- //footer -->
+
+    <div id="page-top"><a href="#"></a></div>
 
   </div>
 

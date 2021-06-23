@@ -3,6 +3,8 @@
 @import "modules/swiper";
 @import "breakpoints/base";
 
+/* breakpointsは各ページで共有 */
+
 // モバイル
 @media (max-width: 960px) {
   @import "modules/mobile-menu";

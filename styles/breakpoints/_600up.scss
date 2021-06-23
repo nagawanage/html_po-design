@@ -50,14 +50,17 @@
 }
 
 .footer {
+  padding-top: 60px;
+  &__inner {
+    width: 90%;
+    max-width: 600px;
+  }
   & .nav__list {
     flex-direction: row;
-    justify-content: space-around;
   }
   & .nav__item {
-    margin: 5px 0;
     & > a {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 }
