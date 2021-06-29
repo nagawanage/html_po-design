@@ -1,12 +1,42 @@
-@mixin btn($border-radius: 30px, $color: #fff, $width: 220px) {
-  border-radius: 10px;
-  color: $color;
-  display: block;
-  margin: 0 auto;
-  width: $width;
+/* メディアクエリ */
+$breakpoint-down: (
+  "sp": "screen and (max-width: 375px)",
+  "md": "screen and (max-width: 600px)",
+  "lg": "screen and (max-width: 960px)",
+) !default;
+
+$breakpoints-up: (
+  "sm": "screen and (min-width: 375px)",
+  "md": "screen and (min-width: 600px)",
+  "lg": "screen and (min-width: 960px)",
+) !default;
+
+$breakpoints-range: (
+  "sm": "screen and (min-width: 0px) and (max-width: 375px)",
+  "md": "screen and (min-width: 376px) and (max-width: 600px)",
+  "lg": "screen and (min-width: 601px) and (max-width: 960px)",
+  // 'xl': 'screen and (min-width: 961px) and (max-width: 1200px)',
+) !default;
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoints-down, $breakpoint)} {
+    @content;
+  }
 }
 
-// スマホ用フォントサイズレスポンシブ
+@mixin mq-up($breakpoint: tab) {
+  @media #{map-get($breakpoints-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-range($breakpoint: md) {
+  @media #{map-get($breakpoints-range, $breakpoint)} {
+    @content;
+  }
+}
+
+/* スマホ用フォントサイズレスポンシブ */
 // 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
 @function get_vw($size, $viewport: 320) {
   $rate: 100 / $viewport;
@@ -18,35 +48,58 @@
   font-size: get_vw($font_size);
 }
 
-// @mixin link-btn($border: 1px $cWhite solid, $width: 220px) {
-@mixin link-btn($color: $cWhite, $border: none) {
+/* btn */
+// @mixin btn($border-radius: 30px, $color: #fff, $width: 220px) {
+//   border-radius: 10px;
+//   color: $color;
+//   display: block;
+//   margin: 0 auto;
+//   width: $width;
+// }
+
+/* link-btn */
+@mixin link-btn($color: $cWhite, $border: none, $padding: 20px 70px) {
   border: $border;
   border-radius: 45px;
   color: $color;
-  font-family: Montserrat;
   font-weight: bold;
-  // text-align: center;
+  & a {
+    color: inherit;
+    display: inline-block;
+    padding: $padding;
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      transform: translateY(-50%);
+      font-family: "Font Awesome 5 Free";
+      content: "\f0da";
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    &:hover::after {
+      right: 20px;
+    }
+  }
 }
 
-// .btn-more {
-//   background: linear-gradient(to right, #7633a4, #250d65); //!
-//   border-radius: 45px;
-//   color: $cWhite;
-//   display: inline-block;
-//   font-family: Montserrat;
-//   font-weight: bold;
-//   margin-top: 30px;
-//   padding: 20px 80px;
-//   @extend %font-sm;
-//   @include link-btn()
-// }
-
+/* arrow-animation */
 @keyframes arrow-animation {
-  0%,
-  100% {
-    transform: scale(0);
+  0% {
+    transform: scale(1, 0); //(x, y)
+    transform-origin: 0 0; //一番上を基準に、下に伸びていく
   }
   50% {
-    transform: scale(1);
+    transform: scale(1, 1); //伸び切る
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1); //100%から縮んでいく
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%; //下を基準に、上が収束していく
   }
 }

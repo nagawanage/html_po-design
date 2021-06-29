@@ -1,7 +1,12 @@
 @import "variables";
 @import "modules/mixin";
+@import "modules/breadcrumb";
+@import "modules/layout";
 @import "modules/swiper";
 @import "breakpoints/base";
+@import "pages/company";
+@import "pages/contact";
+@import "pages/works";
 
 /* breakpointsは各ページで共有 */
 

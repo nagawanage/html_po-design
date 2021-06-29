@@ -1,0 +1,57 @@
+.company-detail {
+  font-family: $main-font-family;
+  &__title {
+    color: $cPurple;
+    font-size: 24px;
+    text-align: center;
+  }
+  & .table-info {
+    margin-bottom: 60px;
+    width: 100%;
+    table-layout: fixed;
+    & tr {
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+      display: block;
+    }
+    & th,
+    td {
+      text-align: left;
+      @include mq-range(md) {
+        display: block;
+      }
+    }
+    & th {
+      font-weight: 600;
+      margin-bottom: 10px;
+      @include mq-up(md) {
+        width: 150px; //!20%指定効かない..
+      }
+    }
+  }
+
+  & .access__gmap {
+    // position: relative;
+    // height: 0;
+    // overflow: hidden;
+    // padding-bottom: 56.25%; //アスペクト比16:9にする
+
+    iframe {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // height: 100%;
+      height: 240px;
+      width: 100%;
+      @include mq-up(md) {
+        height: 400px;
+      }
+    }
+  }
+  & .access__gmap-link {
+    font-size: 14px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

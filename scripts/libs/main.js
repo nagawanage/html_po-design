@@ -28,7 +28,6 @@ $(function () {
    ************************/
   let $header = $(".header");
   let $transPos;
-  console.log($transPos);
 
   $window.on("scroll", function () {
     // $transPos = $(".hero").height() / 2;
@@ -55,27 +54,39 @@ $(function () {
   /************************
    * Page Top
    ************************/
-
   // let appear = false;
-  let pageTop = $("#page-top");
-  //一定幅スクロールしたら
+  let $pageTop = $("#page-top");
+  //一定幅スクロールしたら表示
   $window.scroll(function () {
-    if ($(this).scrollTop() > 200) {
+    if ($(this).scrollTop() > 100) {
       // if (appear == false) {
       //   appear = true;
-      pageTop.stop().animate({ bottom: "50px" }, 400);
+      $pageTop.stop().animate({ bottom: "20px" }, 500);
       // }
     } else {
       // 隠れる
       // if (appear) {
       //   appear = false;
-      pageTop.stop().animate({ bottom: "-50px" }, 400);
+      $pageTop.stop().animate({ bottom: "-100px" }, 400);
       // }
     }
   });
   //トップへ戻る
-  pageTop.click(function () {
+  $pageTop.click(function () {
     $("body, html").animate({ scrollTop: 0 }, 500);
     return false;
   });
 });
+
+/************************
+ * Form Enter
+ ************************/
+// function next_text(idx) {
+//   if (window.event.keyCode == 13) {
+//     // 13は0x0d(CRキー)
+//     // 次のテキストボックスへ飛ばす処理をここにかく
+//     document.contactForm.text1[idx].focus();
+//     return false;
+//   }
+//   return true;
+// }

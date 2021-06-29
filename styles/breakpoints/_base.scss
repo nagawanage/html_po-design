@@ -2,13 +2,10 @@
 Stylesheet: ベーススタイル
 ******************************************************************/
 // ToDo
-// mobile-menu
-// font-family: Montserrat; は別クラス作る
 // .bg-gray分ける意味ない？
-
 body {
-  font: 16px / 1.6 "ヒラギノ角ゴシック", "Hiragino Kaku Gothic", "Meiryo",
-    "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", "Osaka", sans-serif;
+  font: 16px / 1.6 "Montserrat", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
   color: $cBlack;
   // font-size: 1.6rem;
   & .noscroll {
@@ -38,6 +35,11 @@ button {
   display: block;
   border: none;
   padding: 0;
+}
+
+::selection {
+  color: #fff;
+  background-color: $cPurple;
 }
 
 // 定義
@@ -77,9 +79,8 @@ button {
   background: linear-gradient(to right, #7633a4, #250d65); //!
   display: inline-block;
   margin-top: 30px;
-  padding: 20px 80px;
   @extend %font-sm;
-  @include link-btn($border: 1px $cWhite solid);
+  @include link-btn($border: 1px $cWhite solid, $padding: 20px 80px);
 }
 
 .text {
@@ -99,7 +100,7 @@ button {
 .content-width {
   width: 90%;
   margin: 0 auto;
-  max-width: $contentMaxWidth;
+  // max-width: $contentMaxWidth;
 }
 
 .header {
@@ -108,7 +109,7 @@ button {
   // @include font-size_vw(18);
   font-family: Montserrat;
   font-size: 18px;
-  font-weight: bold;
+  // font-weight: bold;
   // line-height: 1;
   padding: 20px 20px;
   position: fixed;
@@ -120,7 +121,6 @@ button {
     background-color: #21054d;
     padding: 10px 20px;
     transition-duration: 0.5s;
-    // box-shadow: 10px 0 25px -10px;
   }
   &__inner {
     display: grid;
@@ -130,16 +130,18 @@ button {
   }
   &__title {
     font-size: 18px;
+    & a {
+      color: inherit;
+    }
   }
 }
 
 .hero {
   position: relative;
-
   background: purple url(./../images/hero.jpg) center no-repeat;
   background-size: cover;
   height: 810px;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
 
   &__inner {
     color: $cWhite;
@@ -147,16 +149,12 @@ button {
     // padding: 60vw 35px 60vw 50px;
     padding: 227px 35px 227px 50px;
     min-width: 290px;
-    & a {
-      color: inherit;
-    }
   }
   &__title {
     font-family: Montserrat;
     @extend %font-lg;
     font-weight: bold;
     line-height: 62px;
-    // @include font-size_vw(48);
     margin-bottom: 20px;
   }
   &__sub-title {
@@ -164,12 +162,26 @@ button {
     margin-bottom: 50px;
   }
   & .link-btn {
-    @include link-btn($border: 1px $cWhite solid);
+    @include link-btn($border: 1px $cWhite solid, $padding: 20px 70px);
     width: 220px;
-    & a {
-      display: inline-block;
-      padding: 20px 70px;
-    }
+    // & a {
+    //   color: inherit;
+    //   display: inline-block;
+    //   position: relative;
+    //   &::after {
+    //     position: absolute;
+    //     top: 50%;
+    //     right: 25px;
+    //     transform: translateY(-50%);
+    //     font-family: "Font Awesome 5 Free";
+    //     content: "\f0da";
+    //     display: inline-block;
+    //     transition: all 0.2s;
+    //   }
+    //   &:hover::after {
+    //     right: 20px;
+    //   }
+    // }
   }
   &__scroll {
     position: absolute;
@@ -194,30 +206,23 @@ button {
   }
 }
 
-@keyframes arrow-animation {
-  0% {
-    transform: scale(1, 0); //(x, y)
-    transform-origin: 0 0; //一番上を基準に、下に伸びていく
+.sub-hero {
+  position: relative;
+  background: purple url(./../images/hero.jpg) center no-repeat;
+  background-size: cover;
+  height: 190px;
+  &__inner {
+    color: $cWhite;
+    font-family: Montserrat;
+    padding: 93px 0 40px 0;
+    text-align: center;
   }
-  50% {
-    transform: scale(1, 1); //伸び切る
-    transform-origin: 0 0;
+  &__title {
+    font-size: 30px;
+    line-height: 37px;
   }
-  50.1% {
-    transform: scale(1, 1); //100%から縮んでいく
-    transform-origin: 0 100%;
-  }
-  100% {
-    transform: scale(1, 0);
-    transform-origin: 0 100%; //下を基準に、上が収束していく
-  }
-}
-
-.main {
-  &__content {
-    & > section:not(:last-child) {
-      @extend .mb-lg;
-    }
+  &__sub-title {
+    font-size: 13px;
   }
 }
 
@@ -238,11 +243,11 @@ button {
 }
 
 .news {
-  @extend .content-width;
+  // @extend .content-width;
 
   & .news-list {
-    &__item {
-      margin-bottom: 40px;
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
     }
   }
 
@@ -268,7 +273,7 @@ button {
 }
 
 .service {
-  @extend .content-width;
+  // @extend .content-width;
 
   & li {
     @extend .mb-md;
@@ -289,22 +294,21 @@ button {
 }
 
 .works {
-  position: relative;
-  padding-bottom: 60px;
-  &::before {
-    @extend .bg-gray;
-    content: "";
-    display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 65%;
-    z-index: -10;
-  }
+  padding-bottom: 40px;
   &__inner {
-    @extend .content-width;
     position: relative;
+    padding: 0 20px 60px 20px;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      content: "";
+      height: 65%;
+      width: 100%;
+      z-index: -10;
+      @extend .bg-gray;
+    }
   }
   &__images {
     margin: 0 auto;
@@ -319,12 +323,10 @@ button {
 }
 
 .company {
-  padding: 80px 0;
+  padding-bottom: 80px;
   background: url(../images/sp_bg-circle.png) center no-repeat;
   background-size: contain;
-  &__inner {
-    text-align: center;
-  }
+  text-align: center;
   & .message {
     font-size: 32px;
     font-weight: 600;
@@ -355,10 +357,11 @@ button {
 }
 
 .contact {
-  &__inner {
-    padding: 60px 0 60px 0;
-    text-align: center;
-    @extend .bg-gray;
+  margin-top: 40px;
+  text-align: center;
+  @extend .bg-gray;
+  & .l-inner {
+    padding: 60px 0;
   }
 }
 
@@ -371,22 +374,6 @@ button {
     color: $cWhite;
     margin: 0 auto;
     text-align: center;
-    // &::after {
-    //   position: absolute;
-    //   top: 30px;
-    //   right: 30px;
-    //   background-color: $cPurple;
-    //   border-radius: 50%;
-    //   color: $cWhite;
-    //   content: "\f062";
-    //   font-family: "Font Awesome 5 Free";
-    //   font-size: 20px;
-    //   font-weight: 600;
-    //   height: 50px;
-    //   line-height: 50px;
-    //   text-align: center;
-    //   width: 50px;
-    // }
   }
   & .footer__nav {
     padding-bottom: 30px;
@@ -399,12 +386,12 @@ button {
   & .nav__item {
     margin: 10px 0;
     & > a {
-      font-weight: bold;
+      // font-weight: 600;
     }
   }
   &__copyright {
     color: #a798b7;
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -412,11 +399,10 @@ button {
   position: fixed;
   right: 15px;
   // top: 90vh;
-  bottom: 50px;
+  // bottom: 50px;
   background: $cPurple;
   border-radius: 50%;
   height: 50px;
-  // opacity: 0.9;
   width: 50px;
   z-index: 100;
   & a {
@@ -436,7 +422,6 @@ button {
       font-size: 24px;
       color: #fff;
       margin: auto;
-      // text-align: center;
     }
   }
 }

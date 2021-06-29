@@ -59,18 +59,8 @@ PC
 }
 
 .news {
-  &__inner {
+  & .l-inner {
     display: flex;
-  }
-  &__title {
-    padding-right: 50px;
-  }
-  & .news-list__item {
-    display: flex;
-    margin-bottom: 15px;
-  }
-  &__head {
-    margin-right: 20px;
   }
 }
 
@@ -83,19 +73,12 @@ PC
 }
 
 .works {
-  padding: 50px 50px 22px 50px;
+  padding: 50px;
   width: 90%;
   margin: 0 auto;
-  &::before {
-    content: "";
-    display: block;
-    width: 65%;
-    position: absolute;
-    height: 100%;
-    z-index: -10;
-  }
   &__inner {
     align-items: center;
+    padding-top: 60px;
     width: 100%;
     display: grid;
     grid-template:
@@ -109,6 +92,15 @@ PC
       // "... ...... ...... ...... ....." 50px
       // / 52vw 20px 1fr;
       / 60% 20px 1fr;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 65%;
+      position: absolute;
+      height: 100%;
+      z-index: -10;
+    }
     & .sec-title {
       grid-row: 2;
       grid-area: title;
