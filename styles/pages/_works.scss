@@ -8,7 +8,6 @@
   }
 
   &__item {
-    font-family: $main-font-family;
     text-align: center;
     &:not(:last-child) {
       @include mq-range(md) {

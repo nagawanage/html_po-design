@@ -1,13 +1,10 @@
 /******************************************************************
 Stylesheet: ベーススタイル
 ******************************************************************/
-// ToDo
-// .bg-gray分ける意味ない？
 body {
   font: 16px / 1.6 "Montserrat", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
   color: $cBlack;
-  // font-size: 1.6rem;
   & .noscroll {
     overflow: hidden;
   }
@@ -66,21 +63,17 @@ button {
   color: $cWhite;
 }
 
-.bg-gray {
-  background-color: $cBgGray;
-}
-
 .block-center {
   margin: 0 auto;
   text-align: center;
 }
 
 .btn-more {
-  background: linear-gradient(to right, #7633a4, #250d65); //!
   display: inline-block;
   margin-top: 30px;
   @extend %font-sm;
-  @include link-btn($border: 1px $cWhite solid, $padding: 20px 80px);
+  @include link-btn($border: 1px $cWhite solid, $width: 200px);
+  @include grad-btn();
 }
 
 .text {
@@ -97,17 +90,10 @@ button {
   // position: relative;
 }
 
-.content-width {
-  width: 90%;
-  margin: 0 auto;
-  // max-width: $contentMaxWidth;
-}
-
 .header {
   color: $cWhite;
 
   // @include font-size_vw(18);
-  font-family: Montserrat;
   font-size: 18px;
   // font-weight: bold;
   // line-height: 1;
@@ -141,7 +127,6 @@ button {
   background: purple url(./../images/hero.jpg) center no-repeat;
   background-size: cover;
   height: 810px;
-  // margin-bottom: 40px;
 
   &__inner {
     color: $cWhite;
@@ -151,7 +136,6 @@ button {
     min-width: 290px;
   }
   &__title {
-    font-family: Montserrat;
     @extend %font-lg;
     font-weight: bold;
     line-height: 62px;
@@ -162,26 +146,7 @@ button {
     margin-bottom: 50px;
   }
   & .link-btn {
-    @include link-btn($border: 1px $cWhite solid, $padding: 20px 70px);
-    width: 220px;
-    // & a {
-    //   color: inherit;
-    //   display: inline-block;
-    //   position: relative;
-    //   &::after {
-    //     position: absolute;
-    //     top: 50%;
-    //     right: 25px;
-    //     transform: translateY(-50%);
-    //     font-family: "Font Awesome 5 Free";
-    //     content: "\f0da";
-    //     display: inline-block;
-    //     transition: all 0.2s;
-    //   }
-    //   &:hover::after {
-    //     right: 20px;
-    //   }
-    // }
+    @include link-btn($border: 1px $cWhite solid, $width: 220px);
   }
   &__scroll {
     position: absolute;
@@ -213,7 +178,6 @@ button {
   height: 190px;
   &__inner {
     color: $cWhite;
-    font-family: Montserrat;
     padding: 93px 0 40px 0;
     text-align: center;
   }
@@ -235,7 +199,6 @@ button {
 
 .sec-title {
   font-size: 30px;
-  font-family: Montserrat;
 }
 .sec-sub-title {
   font-size: 13px;
@@ -243,8 +206,6 @@ button {
 }
 
 .news {
-  // @extend .content-width;
-
   & .news-list {
     &__item:not(:last-child) {
       margin-bottom: 30px;
@@ -257,7 +218,6 @@ button {
 
   &__label {
     background-color: $cLabelBg;
-    font-family: Montserrat;
     font-size: 11px;
     font-weight: bold;
     margin-left: 15px;
@@ -273,8 +233,6 @@ button {
 }
 
 .service {
-  // @extend .content-width;
-
   & li {
     @extend .mb-md;
   }
@@ -307,7 +265,7 @@ button {
       height: 65%;
       width: 100%;
       z-index: -10;
-      @extend .bg-gray;
+      background: $cBgGray;
     }
   }
   &__images {
@@ -346,7 +304,7 @@ button {
   &__inner {
     padding: 60px 0 50px 0;
     text-align: center;
-    @extend .bg-gray;
+    background: $cBgGray;
   }
 
   &__img {
@@ -359,7 +317,7 @@ button {
 .contact {
   margin-top: 40px;
   text-align: center;
-  @extend .bg-gray;
+  background: $cBgGray;
   & .l-inner {
     padding: 60px 0;
   }
@@ -398,8 +356,6 @@ button {
 #page-top {
   position: fixed;
   right: 15px;
-  // top: 90vh;
-  // bottom: 50px;
   background: $cPurple;
   border-radius: 50%;
   height: 50px;

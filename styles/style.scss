@@ -8,10 +8,9 @@
 @import "pages/contact";
 @import "pages/works";
 
-/* breakpointsは各ページで共有 */
-
-// モバイル
-@media (max-width: 960px) {
+/* breakpoints */
+// モバイルメニュー
+@include mq-down(lg) {
   @import "modules/mobile-menu";
 }
 
