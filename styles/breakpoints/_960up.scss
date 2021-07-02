@@ -83,19 +83,18 @@ PC
     grid-template:
     // "... ...... ...... ...... ....." 50px
 
-      "swiper ...... ......" 60px
+      "swiper ...... ......" 4vw
       "swiper ...... title " 56px
       "swiper ...... subttl" 20px
       "swiper ...... text  " 100px
       "swiper ...... btn   " 100px
       // "... ...... ...... ...... ....." 50px
-      // / 52vw 20px 1fr;
       / 60% 20px 1fr;
 
     &::after {
       content: "";
       display: block;
-      width: 65%;
+      width: 63%;
       position: absolute;
       height: 100%;
       z-index: -10;

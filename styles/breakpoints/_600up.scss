@@ -50,7 +50,7 @@
 }
 
 .company {
-  background: url(../images/bg-circle.png);
+  background: url(../images/bg-circle.png) center no-repeat;
   background-size: contain;
   & .underline {
     &:nth-of-type(1) {
