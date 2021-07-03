@@ -151,7 +151,9 @@ PC
   &__img {
     grid-column: 2;
     grid-row: 1;
-    object-fit: cover;
+    & img {
+      height: 100%;
+    }
   }
 }
 

@@ -54,7 +54,7 @@ button {
 }
 
 .hero__title {
-  font-size: 48px;
+  font-size: 44px;
 }
 
 .text, .news__body, .service__text, .works .text, .company .text {
@@ -155,6 +155,9 @@ button {
 
 #container {
   margin: 0 auto;
+  overflow: hidden;
+  width: calc(100vw - 15px);
+  min-width: 320px;
 }
 
 .header {
@@ -261,7 +264,7 @@ button {
   overflow: hidden;
   padding: 10px 10px 90px;
   position: absolute;
-  right: 12px;
+  right: 20px;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -405,8 +408,7 @@ button {
   text-align: center;
 }
 
-.recruit__img {
-  height: 140px;
+.recruit__img > img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 50% 0%;
@@ -1009,11 +1011,15 @@ button {
   .company .underline:nth-of-type(2) {
     padding-left: 0;
   }
-  .recruit__img {
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+}
+
+@media screen and (min-width: 600px) and (min-width: 601px) and (max-width: 960px) {
+  .recruit__img > img {
+    max-height: 320px;
   }
+}
+
+@media screen and (min-width: 600px) {
   .footer {
     padding-top: 60px;
   }
@@ -1188,8 +1194,9 @@ PC
     grid-column: 2;
     -ms-grid-row: 1;
     grid-row: 1;
-    -o-object-fit: cover;
-       object-fit: cover;
+  }
+  .recruit__img img {
+    height: 100%;
   }
   .footer__inner {
     width: 90%;

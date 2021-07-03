@@ -24,7 +24,7 @@ $breakpoints-range: (
   }
 }
 
-@mixin mq-up($breakpoint: tab) {
+@mixin mq-up($breakpoint: md) {
   @media #{map-get($breakpoints-up, $breakpoint)} {
     @content;
   }

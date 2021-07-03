@@ -45,7 +45,7 @@ button {
 }
 
 %font-lg {
-  font-size: 48px;
+  font-size: 44px;
 }
 
 %font-weight-lighter {
@@ -84,6 +84,10 @@ button {
 
 #container {
   margin: 0 auto;
+  overflow: hidden;
+  // width: 100%;
+  width: calc(100vw - 15px);
+  min-width: 320px;
 }
 
 .header {
@@ -147,7 +151,7 @@ button {
     overflow: hidden; //!
     padding: 10px 10px 90px;
     position: absolute;
-    right: 12px;
+    right: 20px;
     writing-mode: vertical-rl; //!
 
     &::after {
@@ -299,8 +303,8 @@ button {
     text-align: center;
   }
 
-  &__img {
-    height: 140px;
+  &__img > img {
+    // height: 300px;
     object-fit: cover;
     object-position: 50% 0%; //!
     width: 100%;

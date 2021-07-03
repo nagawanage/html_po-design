@@ -63,9 +63,10 @@
 }
 
 .recruit {
-  &__img {
-    height: 100%;
-    object-fit: cover;
+  &__img > img {
+    @include mq-range(lg) {
+      max-height: 320px;
+    }
   }
 }
 
