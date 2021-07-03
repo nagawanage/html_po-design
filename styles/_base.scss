@@ -29,14 +29,14 @@ li {
 }
 
 button {
-  display: block;
   border: none;
+  display: block;
   padding: 0;
 }
 
 ::selection {
-  color: #fff;
   background-color: $cPurple;
+  color: #fff;
 }
 
 // 定義
@@ -72,36 +72,28 @@ button {
   display: inline-block;
   margin-top: 30px;
   @extend %font-sm;
-  @include link-btn($border: 1px $cWhite solid, $width: 200px);
   @include grad-btn();
+  @include link-btn($border: 1px $cWhite solid, $width: 200px);
 }
 
 .text {
+  line-height: 1.8;
   @extend %font-sm;
   @extend %font-weight-lighter;
-  line-height: 1.8;
 }
-//
 
 #container {
   margin: 0 auto;
-  // text-align: center;
-  // height: 100%;
-  // position: relative;
 }
 
 .header {
   color: $cWhite;
-
-  // @include font-size_vw(18);
   font-size: 18px;
-  // font-weight: bold;
-  // line-height: 1;
   padding: 20px 20px;
   position: fixed;
+  transition-duration: 0.5s;
   width: 100%;
   z-index: 10;
-  transition-duration: 0.5s;
 
   &.transform {
     background-color: #21054d;
@@ -109,9 +101,9 @@ button {
     transition-duration: 0.5s;
   }
   &__inner {
+    align-items: center;
     display: grid;
     grid-template: 1fr / 1fr 40px;
-    align-items: center;
     // height: 100%;
   }
   &__title {
@@ -123,10 +115,10 @@ button {
 }
 
 .hero {
-  position: relative;
   background: purple url(./../images/hero.jpg) center no-repeat;
   background-size: cover;
   height: 810px;
+  position: relative;
 
   &__inner {
     color: $cWhite;
@@ -136,10 +128,10 @@ button {
     min-width: 290px;
   }
   &__title {
-    @extend %font-lg;
     font-weight: bold;
     line-height: 62px;
     margin-bottom: 20px;
+    @extend %font-lg;
   }
   &__sub-title {
     line-height: 29px;
@@ -149,33 +141,33 @@ button {
     @include link-btn($border: 1px $cWhite solid, $width: 220px);
   }
   &__scroll {
-    position: absolute;
     bottom: 0;
-    right: 12px;
     font-size: 10px;
     letter-spacing: 0.2em;
     overflow: hidden; //!
     padding: 10px 10px 90px;
+    position: absolute;
+    right: 12px;
     writing-mode: vertical-rl; //!
 
     &::after {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      left: 50%;
-      background: #fff;
-      height: 80px;
-      width: 1px;
       animation: arrow-animation 1.6s ease infinite;
+      background: #fff;
+      bottom: 0;
+      content: "";
+      height: 80px;
+      left: 50%;
+      width: 1px;
+      position: absolute;
     }
   }
 }
 
 .sub-hero {
-  position: relative;
   background: purple url(./../images/hero.jpg) center no-repeat;
   background-size: cover;
   height: 190px;
+  position: relative;
   &__inner {
     color: $cWhite;
     padding: 93px 0 40px 0;
@@ -218,14 +210,14 @@ button {
 
   &__label {
     background-color: $cLabelBg;
+    border-radius: 20px;
+    display: inline-block;
     font-size: 11px;
     font-weight: bold;
     margin-left: 15px;
     padding: 4px 0;
-    border-radius: 20px;
-    width: 80px;
-    display: inline-block;
     text-align: center;
+    width: 80px;
   }
   &__body {
     @extend %font-weight-lighter;
@@ -237,14 +229,14 @@ button {
     @extend .mb-md;
   }
   &__img {
-    overflow: hidden;
     display: block;
+    overflow: hidden;
     width: 100%;
   }
   &__title {
-    text-align: center;
     font-weight: bold;
     margin: 10px 0;
+    text-align: center;
   }
   &__text {
     @extend %font-weight-lighter;
@@ -254,18 +246,18 @@ button {
 .works {
   padding-bottom: 40px;
   &__inner {
-    position: relative;
     padding: 0 20px 60px 20px;
+    position: relative;
     &::after {
-      position: absolute;
+      background: $cBgGray;
       bottom: 0;
-      right: 0;
-      display: block;
       content: "";
+      display: block;
       height: 65%;
+      position: absolute;
+      right: 0;
       width: 100%;
       z-index: -10;
-      background: $cBgGray;
     }
   }
   &__images {
@@ -281,9 +273,9 @@ button {
 }
 
 .company {
-  padding-bottom: 80px;
   background: url(../images/sp_bg-circle.png) center no-repeat;
   background-size: contain;
+  padding-bottom: 80px;
   text-align: center;
   & .message {
     font-size: 32px;
@@ -302,33 +294,33 @@ button {
 
 .recruit {
   &__inner {
+    background: $cBgGray;
     padding: 60px 0 50px 0;
     text-align: center;
-    background: $cBgGray;
   }
 
   &__img {
     height: 140px;
-    width: 100%;
     object-fit: cover;
     object-position: 50% 0%; //!
+    width: 100%;
   }
 }
 
 .contact {
+  background: $cBgGray;
   margin-top: 40px;
   text-align: center;
-  background: $cBgGray;
   & .l-inner {
     padding: 60px 0;
   }
 }
 
 .footer {
-  position: relative;
   background-color: #120e19;
+  position: relative;
   padding: 30px 20px 40px 20px;
-  min-width: 375px;
+  min-width: 320px;
   &__inner {
     color: $cWhite;
     margin: 0 auto;
@@ -351,34 +343,5 @@ button {
   &__copyright {
     color: #a798b7;
     font-size: 13px;
-  }
-}
-
-#page-top {
-  position: fixed;
-  right: 15px;
-  background: $cPurple;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  z-index: 100;
-  & a {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    &::before {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: "Font Awesome 5 Free";
-      font-weight: 600;
-      content: "\f062";
-      font-size: 24px;
-      color: #fff;
-      margin: auto;
-    }
   }
 }

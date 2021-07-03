@@ -17,6 +17,9 @@
     list-style: none;
     text-transform: uppercase;
 
+    & a {
+      color: $cPurple;
+    }
     & a:hover {
       text-decoration: underline;
     }

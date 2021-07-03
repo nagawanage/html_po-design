@@ -2,9 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  @include mq-up(md) {
-    padding: 0 40px;
-  }
+
   &--xs {
     max-width: 780px;
   }
@@ -13,6 +11,10 @@
   }
   &--xl {
     max-width: 1300px;
+  }
+
+  @include mq-up(md) {
+    padding: 0 40px;
   }
 }
 

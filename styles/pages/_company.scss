@@ -16,7 +16,7 @@
     & th,
     td {
       text-align: left;
-      @include mq-range(md) {
+      @include mq-down(md) {
         display: block;
       }
     }
@@ -25,6 +25,7 @@
       margin-bottom: 10px;
       @include mq-up(md) {
         width: 150px; //!20%指定効かない..
+        // width: 0%; //!20%指定効かない..
       }
     }
   }
@@ -49,6 +50,7 @@
   }
   & .access__gmap-link {
     font-size: 14px;
+    color: $cPurple;
     &:hover {
       text-decoration: underline;
     }

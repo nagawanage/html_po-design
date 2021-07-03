@@ -77,7 +77,8 @@ PC
   margin: 0 auto;
   &__inner {
     align-items: center;
-    padding-top: 60px;
+    padding-top: 7vw;
+    padding-bottom: 5vw;
     width: 100%;
     display: grid;
     grid-template:
@@ -88,14 +89,16 @@ PC
       "swiper ...... subttl" 20px
       "swiper ...... text  " 100px
       "swiper ...... btn   " 100px
+      "swiper ...... ......" 4vw
       // "... ...... ...... ...... ....." 50px
       / 60% 20px 1fr;
 
     &::after {
       content: "";
       display: block;
-      width: 63%;
+      width: 68%;
       position: absolute;
+      right: -8%;
       height: 100%;
       z-index: -10;
     }
@@ -144,6 +147,7 @@ PC
   grid-template-columns: 1fr 1.5fr;
   width: 80%;
   margin: 0 auto;
+  align-items: stretch;
   &__img {
     grid-column: 2;
     grid-row: 1;

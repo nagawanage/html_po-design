@@ -1,18 +1,18 @@
 /* メディアクエリ */
 $breakpoints-down: (
-  "sp": "screen and (max-width: 375px)",
+  "sp": "screen and (max-width: 320px)",
   "md": "screen and (max-width: 600px)",
   "lg": "screen and (max-width: 960px)",
 ) !default;
 
 $breakpoints-up: (
-  "sm": "screen and (min-width: 375px)",
+  "sm": "screen and (min-width: 320px)",
   "md": "screen and (min-width: 600px)",
   "lg": "screen and (min-width: 960px)",
 ) !default;
 
 $breakpoints-range: (
-  "sm": "screen and (min-width: 0px) and (max-width: 375px)",
+  "sm": "screen and (min-width: 0px) and (max-width: 320px)",
   "md": "screen and (min-width: 376px) and (max-width: 600px)",
   "lg": "screen and (min-width: 601px) and (max-width: 960px)",
   // 'xl': 'screen and (min-width: 961px) and (max-width: 1200px)',
@@ -113,25 +113,5 @@ $breakpoints-range: (
   }
   &:hover::before {
     opacity: 0;
-  }
-}
-
-/* arrow-animation */
-@keyframes arrow-animation {
-  0% {
-    transform: scale(1, 0); //(x, y)
-    transform-origin: 0 0; //一番上を基準に、下に伸びていく
-  }
-  50% {
-    transform: scale(1, 1); //伸び切る
-    transform-origin: 0 0;
-  }
-  50.1% {
-    transform: scale(1, 1); //100%から縮んでいく
-    transform-origin: 0 100%;
-  }
-  100% {
-    transform: scale(1, 0);
-    transform-origin: 0 100%; //下を基準に、上が収束していく
   }
 }
