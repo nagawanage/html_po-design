@@ -34,9 +34,9 @@ $(function () {
     $transPos = $header.height();
     if ($window.scrollTop() > $transPos) {
       // if ($window.scrollTop() > 100) {
-      $header.addClass("transform");
+      $header.addClass("is-active");
     } else {
-      $header.removeClass("transform");
+      $header.removeClass("is-active");
     }
   });
 
@@ -48,7 +48,7 @@ $(function () {
   $burgerMenu.on("click", function () {
     $burgerMenu.toggleClass("is-click");
     $globalNav.toggleClass("is-show");
-    $("body").toggleClass("noscroll");
+    $("body").toggleClass("is-noscroll");
   });
 
   /************************

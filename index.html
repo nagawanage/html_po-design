@@ -13,11 +13,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
   <!-- reset css -->
-  <!-- <link rel="stylesheet" href="styles/vendors/sanitize.css"/> -->
-  <!-- <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css"/> -->
   <link rel="stylesheet" href="styles/vendors/modern-css-reset.css" />
 
-  <!-- <link rel="stylesheet" href="styles/vendors/bootstrap.css"/> -->
   <link rel="stylesheet" href="styles/vendors/swiper.min.css" />
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="icon" href="./imges/favicon.ico">
@@ -42,7 +39,7 @@
 </head>
 
 <body>
-  <div id="container">
+  <div class="l-container">
     <!-- header -->
     <header class="header">
       <div class="header__inner">
@@ -71,8 +68,8 @@
     <!-- hero -->
     <section class="hero">
       <div class="hero__inner">
-        <h2 class="hero__title">WEB <br class="sp-br">DESIGN <br class="sp-br">SPECIALIST</h2>
-        <p class="hero__sub-title">お客様の夢を叶える<br class="sp-br">Webサイトを制作</p>
+        <h2 class="hero__title">WEB <br class="u-show-sp">DESIGN <br class="u-show-sp">SPECIALIST</h2>
+        <p class="hero__sub-title">お客様の夢を叶える<br class="u-show-sp">Webサイトを制作</p>
         <div class="link-btn"><a href="contact.html" class="btn">CONTACT</a></div>
         <span class="hero__scroll">SCROLL</span>
       </div>
@@ -86,7 +83,7 @@
         <!-- news -->
         <section class="news l-section">
           <div class="l-inner">
-            <div class="news__title">
+            <div class="news__title l-heading">
               <h2 class="sec-title">NEWS</h2>
               <p class="sec-sub-title">お知らせ</p>
             </div>
@@ -122,10 +119,12 @@
         <!-- service -->
         <section class="service l-section">
           <div class="l-inner">
-            <h2 class="sec-title">SERVICE</h2>
-            <p class="sec-sub-title">事業内容</p>
+            <div class="l-heading">
+              <h2 class="sec-title">SERVICE</h2>
+              <p class="sec-sub-title">事業内容</p>
+            </div>
 
-            <ul class="service-list__list">
+            <ul class="service-list">
               <li class="service-list__item">
                 <img class="service__img" src="./images/service01.jpg" alt="Webサイト制作">
                 <p class="service__title">Webサイト制作</p>
@@ -142,7 +141,7 @@
                 <p class="service__text">スマートフォンアプリ開発の他、Vue.jsやReactによるWebアプリの開発が可能です。</p>
               </li>
             </ul>
-            <div class="block-center">
+            <div class="l-block-center">
               <div class="btn-more"> <a href="#">MORE</a></div>
             </div>
           </div>
@@ -152,8 +151,10 @@
         <!-- works -->
         <section class="works l-section">
           <div class="works__inner l-inner">
-            <h2 class="sec-title">WORKS</h2>
-            <p class="sec-sub-title">制作実績</p>
+            <div class="l-heading">
+              <h2 class="sec-title">WORKS</h2>
+              <p class="sec-sub-title">制作実績</p>
+            </div>
             <div class="works__images">
               <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -171,7 +172,7 @@
             <p class="text">様々なジャンルのWebサイト制作が可能です。<br>
               ご購入やお申込み数の増加などを実現します！
             </p>
-            <div class="block-center">
+            <div class="l-block-center">
               <div class="btn-more"> <a href="works.html">MORE</a></div>
             </div>
           </div>
@@ -181,21 +182,23 @@
         <!-- company -->
         <section class="company l-section">
           <div class="l-inner">
-            <h2 class="sec-title">COMPANY</h2>
-            <p class="sec-sub-title">私たちについて</p>
+            <div class="l-heading">
+              <h2 class="sec-title">COMPANY</h2>
+              <p class="sec-sub-title">私たちについて</p>
+            </div>
             <p class="message">
-              <span class="underline">サイトのゴール = </span><br class="sp-br">
+              <span class="underline">サイトのゴール = </span><br class="u-show-sp">
               <span class="underline">夢を叶えること</span>
             </p>
             <p class="text">お客様の夢を叶えること。<br>
-              それがWebサイトのゴールであり、<br class="sp-br">
+              それがWebサイトのゴールであり、<br class="u-show-sp">
               私たちが目指すことです。<br>
-              だからこそちゃんと成果を出すサイトを<br class="sp-br">
+              だからこそちゃんと成果を出すサイトを<br class="u-show-sp">
               全力でお作りします。<br>
               お客様の笑顔を見たい。<br>
               夢を実現する手助けをさせてください。<br>
             </p>
-            <div class="block-center">
+            <div class="l-block-center">
               <div class="btn-more"><a href="company.html">MORE</a></div>
             </div>
           </div>
@@ -208,10 +211,12 @@
             <img src="./images/recruit.jpg" alt="RECRUIT">
           </div>
           <div class="recruit__inner">
-            <h2 class="sec-title">RECRUIT</h2>
-            <p class="sec-sub-title">採用情報</p>
+            <div class="l-heading">
+              <h2 class="sec-title">RECRUIT</h2>
+              <p class="sec-sub-title">採用情報</p>
+            </div>
             <p class="text">私たちと一緒に働きませんか？</p>
-            <div class="block-center">
+            <div class="l-block-center">
               <div class="btn-more"><a href="#">MORE</a></div>
             </div>
           </div>
@@ -221,11 +226,13 @@
         <!-- contact -->
         <section class="contact">
           <div class="l-inner">
-            <h2 class="sec-title">CONTACT</h2>
-            <p class="sec-sub-title">お問い合わせ</p>
-            <p class="text">Webサイトの制作のご依頼やお見積りなど、<br class="sp-br">
+            <div class="l-heading">
+              <h2 class="sec-title">CONTACT</h2>
+              <p class="sec-sub-title">お問い合わせ</p>
+            </div>
+            <p class="text">Webサイトの制作のご依頼やお見積りなど、<br class="u-show-sp">
               お気軽にご相談ください。</p>
-            <div class="block-center">
+            <div class="l-block-center">
               <div class="btn-more"><a href="contact.html">MORE</a></div>
             </div>
           </div>
@@ -255,7 +262,7 @@
         </div>
         <div class="footer__policy">
         </div>
-        <p class="footer__copyright">Copyright © 2021 xxx Japan.<br class="sp-br">All Rights Reserved.</p>
+        <p class="footer__copyright">Copyright © 2021 xxx Japan.<br class="u-show-sp">All Rights Reserved.</p>
       </div>
     </footer>
     <!-- //footer -->

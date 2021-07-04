@@ -1,0 +1,66 @@
+/******************************************************************
+ Stylesheet: ベーススタイル
+******************************************************************/
+body {
+  font: 16px / 1.6 "Montserrat", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+  color: $cBlack;
+  // & .noscroll {
+  //   overflow: hidden;
+  // }
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  display: block;
+  padding: 0;
+}
+
+::selection {
+  background-color: $cPurple;
+  color: #fff;
+}
+
+// 定義
+%font-sm {
+  font-size: 14px;
+}
+
+%font-lg {
+  font-size: 44px;
+  @include mq-up(lg) {
+    font-size: 72px;
+  }
+}
+
+%font-weight-lighter {
+  font-weight: 300;
+}
+
+.color-nav {
+  color: $cWhite;
+}
+
+.text {
+  line-height: 1.8;
+  @extend %font-sm;
+  @extend %font-weight-lighter;
+}

@@ -1,20 +1,24 @@
 /* メディアクエリ */
+$sm: 320px;
+$md: 600px;
+$lg: 960px;
+
 $breakpoints-down: (
-  "sp": "screen and (max-width: 320px)",
-  "md": "screen and (max-width: 600px)",
-  "lg": "screen and (max-width: 960px)",
+  "sp": "screen and (max-width: #{$sm})",
+  "md": "screen and (max-width: #{$md})",
+  "lg": "screen and (max-width: #{$lg})",
 ) !default;
 
 $breakpoints-up: (
-  "sm": "screen and (min-width: 320px)",
-  "md": "screen and (min-width: 600px)",
-  "lg": "screen and (min-width: 960px)",
+  "sm": "screen and (min-width: #{$sm})",
+  "md": "screen and (min-width: #{$md})",
+  "lg": "screen and (min-width: #{$lg})",
 ) !default;
 
 $breakpoints-range: (
-  "sm": "screen and (min-width: 0px) and (max-width: 320px)",
-  "md": "screen and (min-width: 376px) and (max-width: 600px)",
-  "lg": "screen and (min-width: 601px) and (max-width: 960px)",
+  "sm": "screen and (min-width: 0px) and (max-width: #{$sm})",
+  "md": "screen and (min-width: #{$sm} + 1px) and (max-width: #{$md})",
+  "lg": "screen and (min-width: #{$md} + 1px) and (max-width: #{$lg})",
   // 'xl': 'screen and (min-width: 961px) and (max-width: 1200px)',
 ) !default;
 
@@ -113,5 +117,25 @@ $breakpoints-range: (
   }
   &:hover::before {
     opacity: 0;
+  }
+}
+
+@mixin nav-underline() {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: $cWhite;
+    bottom: -7px;
+    left: 0;
+    transform: scale(0, 1);
+    transition: transform 0.3s;
+    transform-origin: left top;
+  }
+  &:hover::after {
+    transform: scale(1, 1);
   }
 }

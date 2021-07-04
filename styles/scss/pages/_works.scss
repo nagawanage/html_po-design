@@ -10,7 +10,7 @@
   &__item {
     text-align: center;
     &:not(:last-child) {
-      @include mq-range(md) {
+      @include mq-down(md) {
         margin: 40px 15px;
       }
     }
@@ -29,7 +29,7 @@
       width: 100%;
     }
     @include mq-up(md) {
-      font-size: 20px;
+      font-size: 16px;
     }
   }
 }

@@ -13,11 +13,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
   <!-- reset css -->
-  <!-- <link rel="stylesheet" href="styles/vendors/sanitize.css"/> -->
-  <!-- <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css"/> -->
   <link rel="stylesheet" href="styles/vendors/modern-css-reset.css" />
 
-  <!-- <link rel="stylesheet" href="styles/vendors/bootstrap.css"/> -->
   <link rel="stylesheet" href="styles/vendors/swiper.min.css" />
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="icon" href="./imges/favicon.ico">
@@ -42,7 +39,7 @@
 </head>
 
 <body>
-  <div id="container">
+  <div class="l-container">
     <!-- header -->
     <header class="header">
       <div class="header__inner">
@@ -106,28 +103,28 @@
         <!-- works -->
         <section class="works-detail l-section">
           <div class="l-inner">
-            <div class="works-detail__list">
-              <div class="works-detail__item">
+            <ul class="works-detail__list">
+              <li class="works-detail__item">
                 <img src="./images/works/smoothiesta.jpg" alt="smoothiesta">
                 <p class="works-detail__desc"><a href="#"> Smoothiesta 様</a></p>
-              </div>
-              <div class="works-detail__item">
+              </li>
+              <li class="works-detail__item">
                 <img src="./images/works/web-conference.jpg" alt="web-conference">
                 <p class="works-detail__desc"><a href="#"> Web Conference 様</a></p>
-              </div>
-              <div class="works-detail__item">
+              </li>
+              <li class="works-detail__item">
                 <img src="./images/works/lamina.jpg" alt="lamina">
                 <p class="works-detail__desc"><a href="#"> LAMINA 様</a></p>
-              </div>
-              <div class="works-detail__item">
+              </li>
+              <li class="works-detail__item">
                 <img src="./images/works/tabilog.jpg" alt="tabilog">
                 <p class="works-detail__desc"><a href="#"> TABILOG 様</a></p>
-              </div>
-              <div class="works-detail__item">
+              </li>
+              <li class="works-detail__item">
                 <img src="./images/works/citylab.jpg" alt="citylab">
                 <p class="works-detail__desc"><a href="#"> CITY Lab 様</a></p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
         <!-- //works -->
@@ -135,11 +132,13 @@
         <!-- contact -->
         <section class="contact">
           <div class="l-inner">
-            <h2 class="sec-title">CONTACT</h2>
-            <p class="sec-sub-title">お問い合わせ</p>
-            <p class="text">Webサイトの制作のご依頼やお見積りなど、<br class="sp-br">
+            <div class="l-heading">
+              <h2 class="sec-title">CONTACT</h2>
+              <p class="sec-sub-title">お問い合わせ</p>
+            </div>
+            <p class="text">Webサイトの制作のご依頼やお見積りなど、<br class="u-show-sp">
               お気軽にご相談ください。</p>
-            <div class="block-center">
+            <div class="l-block-center">
               <div class="btn-more"><a href="#">MORE</a></div>
             </div>
           </div>
@@ -172,7 +171,7 @@
         <div class="footer__policy">
           <!-- <a class="" href="#">プライバシーポリシー</a> -->
         </div>
-        <p class="footer__copyright">Copyright © 2021 xxx Japan.<br class="sp-br">All Rights Reserved.</p>
+        <p class="footer__copyright">Copyright © 2021 xxx Japan.<br class="u-show-sp">All Rights Reserved.</p>
       </div>
     </footer>
     <!-- //footer -->

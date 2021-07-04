@@ -1,31 +1,28 @@
-@import "variables";
-@import "mixins";
+/* Foundation */
+@import "scss/foundation/variables";
+@import "scss/foundation/mixins";
+@import "scss/foundation/animations.scss";
+@import "scss/foundation/base";
 
-/* base */
-@import "base";
+/* Layout */
+@import "scss/layout/_footer.scss";
+@import "scss/layout/_header.scss";
+@import "scss/layout/_hero.scss";
+@import "scss/layout/layout";
 
-/* modules */
-@import "modules/animations";
-@import "modules/breadcrumb";
-@import "modules/layout";
-@import "modules/pagetop";
-@import "modules/swiper";
-// モバイルメニュー
-@include mq-down(lg) {
-  @import "modules/mobile-menu";
-}
+/* Object */
+@import "scss/object/component/_breadcrumb.scss";
+@import "scss/object/component/_btn.scss";
+@import "scss/object/component/_page-top.scss";
+@import "scss/object/component/_section-title";
+@import "scss/object/component/_swiper.scss";
 
-/* pages */
-@import "pages/company";
-@import "pages/contact";
-@import "pages/works";
+@import "scss/object/project/_mobile-menu.scss";
 
-/* breakpoints */
-// タブレット
-@include mq-up(md) {
-  @import "breakpoints/600up";
-}
-// PC
-@include mq-up(lg) {
-  @import "breakpoints/960up";
-}
+@import "scss/object/utility/_u-show-sp.scss";
+
+/* Pages */
+@import "scss/pages/company";
+@import "scss/pages/contact";
+@import "scss/pages/index";
+@import "scss/pages/works";
