@@ -1,28 +1,29 @@
 /* Foundation */
-@import "scss/foundation/variables";
-@import "scss/foundation/mixins";
-@import "scss/foundation/animations.scss";
-@import "scss/foundation/base";
+@import "sass/foundation/variables";
+@import "sass/foundation/mixins";
+@import "sass/foundation/animations.scss";
+@import "sass/foundation/base";
 
 /* Layout */
-@import "scss/layout/_footer.scss";
-@import "scss/layout/_header.scss";
-@import "scss/layout/_hero.scss";
-@import "scss/layout/layout";
+@import "sass/layout/footer.scss";
+@import "sass/layout/header.scss";
+@import "sass/layout/hero.scss";
+@import "sass/layout/layout";
 
 /* Object */
-@import "scss/object/component/_breadcrumb.scss";
-@import "scss/object/component/_btn.scss";
-@import "scss/object/component/_page-top.scss";
-@import "scss/object/component/_section-title";
-@import "scss/object/component/_swiper.scss";
+@import "sass/object/component/breadcrumb.scss";
+@import "sass/object/component/btn.scss";
+@import "sass/object/component/form.scss";
+@import "sass/object/component/page-top.scss";
+@import "sass/object/component/section-title";
+@import "sass/object/component/swiper.scss";
 
-@import "scss/object/project/_mobile-menu.scss";
+@import "sass/object/project/mobile-menu.scss";
 
-@import "scss/object/utility/_u-show-sp.scss";
+@import "sass/object/utility/u-show-sp.scss";
 
 /* Pages */
-@import "scss/pages/company";
-@import "scss/pages/contact";
-@import "scss/pages/index";
-@import "scss/pages/works";
+@import "sass/pages/company";
+@import "sass/pages/contact";
+@import "sass/pages/index";
+@import "sass/pages/works";

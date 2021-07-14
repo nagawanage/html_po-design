@@ -639,6 +639,98 @@ button {
   right: 1.2rem;
 }
 
+.form__input, .form__select, .form__textarea {
+  padding: 8px;
+  border: solid 1px #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 320px + 1px) and (max-width: 600px) {
+  .form__input, .form__select, .form__textarea {
+    width: 100%;
+  }
+}
+
+.form__heading {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.form__body {
+  background: #f0f0f0;
+  padding: 30px;
+}
+
+@media screen and (min-width: 600px) {
+  .form__body {
+    padding: 90px;
+  }
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.form__title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 600px) {
+  .form__input, .form__select {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .form__textarea {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .form__textarea {
+    width: 600px;
+  }
+}
+
+.form input[type="radio"] {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.form input[type="tel"] {
+  width: 200px;
+}
+
+.form__note {
+  font-weight: normal;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.form__radio label {
+  font-size: 15px;
+}
+
+@media screen and (min-width: 600px) {
+  .form__radio {
+    display: inline;
+    margin-right: 35px;
+  }
+}
+
+.form .required::after {
+  content: "*必須";
+  font-size: 13px;
+  color: #391e88;
+  padding-left: 10px;
+  vertical-align: text-top;
+}
+
 #page-top {
   position: fixed;
   right: 15px;
@@ -892,102 +984,6 @@ button {
   text-decoration: underline;
 }
 
-.contact-form .form__input, .contact-form .form__select, .contact-form .form__textarea {
-  padding: 8px;
-  border: solid 1px #aaa;
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-@media screen and (min-width: 320px + 1px) and (max-width: 600px) {
-  .contact-form .form__input, .contact-form .form__select, .contact-form .form__textarea {
-    width: 100%;
-  }
-}
-
-.contact-form__head {
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-.contact-form__body {
-  background: #f0f0f0;
-  padding: 30px;
-}
-
-@media screen and (min-width: 600px) {
-  .contact-form__body {
-    padding: 90px;
-  }
-}
-
-.contact-form .form__group:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.contact-form .form__title {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-  font-size: 0.9rem;
-}
-
-@media screen and (min-width: 600px) {
-  .contact-form .form__input, .contact-form .form__select {
-    width: 300px;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .contact-form .form__textarea {
-    width: 400px;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .contact-form .form__textarea {
-    width: 600px;
-  }
-}
-
-.contact-form .form input[type="radio"] {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-.contact-form .form input[type="tel"] {
-  width: 200px;
-}
-
-.contact-form .form__note {
-  font-weight: normal;
-  margin-left: 5px;
-  font-size: 12px;
-}
-
-.contact-form .form__radio label {
-  font-size: 15px;
-}
-
-@media screen and (min-width: 600px) {
-  .contact-form .form__radio {
-    display: inline;
-    margin-right: 35px;
-  }
-}
-
-.contact-form .form .required::after {
-  content: "*必須";
-  font-size: 13px;
-  color: #391e88;
-  padding-left: 10px;
-  vertical-align: text-top;
-}
-
-.contact-form .form .btn-more {
-  margin-top: 50px;
-}
-
 .btn-more {
   margin-top: 50px;
 }
@@ -999,7 +995,7 @@ button {
   margin-bottom: 30px;
 }
 
-.news__head {
+.news__heading {
   margin-bottom: 10px;
 }
 

@@ -55,7 +55,7 @@ $(function () {
    * Page Top
    ************************/
   // let appear = false;
-  let $pageTop = $("#page-top");
+  let $pageTop = $("#js-page-top");
   //一定幅スクロールしたら表示
   $window.scroll(function () {
     if ($(this).scrollTop() > 100) {
