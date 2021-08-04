@@ -1,3 +1,2 @@
 hogehoge
 fugafuga
-てｓとてｓと
