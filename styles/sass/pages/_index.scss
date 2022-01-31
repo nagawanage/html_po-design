@@ -10,6 +10,9 @@
 
   &__heading {
     margin-bottom: 10px;
+    @include mq-up(md) {
+      white-space: nowrap;
+    }
   }
 
   &__label {
@@ -25,6 +28,9 @@
   }
   &__body {
     @extend %font-weight-lighter;
+    @include mq-up(md) {
+      padding-left: 30px;
+    }
   }
 
   @include mq-up(md) {
@@ -50,6 +56,7 @@
     }
     &__title {
       margin: 0 50px;
+      align-items: center;
     }
   }
 }

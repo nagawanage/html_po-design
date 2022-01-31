@@ -731,7 +731,7 @@ button {
   vertical-align: text-top;
 }
 
-#page-top {
+#js-page-top {
   position: fixed;
   right: 15px;
   background: #391e88;
@@ -741,7 +741,7 @@ button {
   z-index: 100;
 }
 
-#page-top a {
+#js-page-top a {
   position: relative;
   display: block;
   width: 100%;
@@ -749,7 +749,7 @@ button {
   text-decoration: none;
 }
 
-#page-top a::before {
+#js-page-top a::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -999,6 +999,12 @@ button {
   margin-bottom: 10px;
 }
 
+@media screen and (min-width: 600px) {
+  .news__heading {
+    white-space: nowrap;
+  }
+}
+
 .news__label {
   background-color: #e8e8e8;
   border-radius: 20px;
@@ -1009,6 +1015,12 @@ button {
   padding: 4px 0;
   text-align: center;
   width: 80px;
+}
+
+@media screen and (min-width: 600px) {
+  .news__body {
+    padding-left: 30px;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -1037,6 +1049,9 @@ button {
   }
   .news__title {
     margin: 0 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
